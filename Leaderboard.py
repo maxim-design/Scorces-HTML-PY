@@ -7,8 +7,8 @@ import boto3
 
 instance_id = 'i-0401da1e3420f1206'
 client = boto3.client('ec2', region_name='eu-west-1',
-    aws_access_key_id='AKIA4XZYHXUEJ42YMJUL',
-    aws_secret_access_key='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')
+    aws_access_key_id='AKIA4XZYHXUEJ42YMJU',
+    aws_secret_access_key='cwEGL7sOlrl2zRBfyOAPvo8IOnGlD2jntQ0rIgi')
 response = client.describe_instances(InstanceIds=[instance_id])
 public_ip = response['Reservations'][0]['Instances'][0]['PublicIpAddress']
 
