@@ -1,0 +1,26 @@
+2023-01-29 22:56:27.713524: cannot open playerdata.dat (scores file). check file exists/corrupted
+ErrorHandle: UndefinedError: 'qrcodegen.QrCode object' has no attribute 'to_svg_str'
+2023-01-29 22:56:41.687326: cannot open playerdata.dat (scores file). check file exists/corrupted
+ErrorHandle: UndefinedError: 'qrcodegen.QrCode object' has no attribute 'to_svg_str'
+2023-01-29 23:00:56.788578: cannot open playerdata.dat (scores file). check file exists/corrupted
+ErrorHandle: UndefinedError: 'qrcodegen.QrCode object' has no attribute 'to_svg_str'
+2023-01-29 23:00:57.457086: cannot open playerdata.dat (scores file). check file exists/corrupted
+ErrorHandle: UndefinedError: 'qrcodegen.QrCode object' has no attribute 'to_svg_str'
+2023-01-29 23:00:57.769807: cannot open playerdata.dat (scores file). check file exists/corrupted
+ErrorHandle: UndefinedError: 'qrcodegen.QrCode object' has no attribute 'to_svg_str'
+2023-01-29 23:00:58.024783: cannot open playerdata.dat (scores file). check file exists/corrupted
+ErrorHandle: UndefinedError: 'qrcodegen.QrCode object' has no attribute 'to_svg_str'
+2023-01-29 23:00:58.265137: cannot open playerdata.dat (scores file). check file exists/corrupted
+ErrorHandle: UndefinedError: 'qrcodegen.QrCode object' has no attribute 'to_svg_str'
+2023-01-29 23:00:58.496586: cannot open playerdata.dat (scores file). check file exists/corrupted
+ErrorHandle: UndefinedError: 'qrcodegen.QrCode object' has no attribute 'to_svg_str'
+2023-01-29 23:00:59.472491: cannot open playerdata.dat (scores file). check file exists/corrupted
+ErrorHandle: UndefinedError: 'qrcodegen.QrCode object' has no attribute 'to_svg_str'
+2023-01-29 23:00:59.637289: cannot open playerdata.dat (scores file). check file exists/corrupted
+ErrorHandle: UndefinedError: 'qrcodegen.QrCode object' has no attribute 'to_svg_str'
+2023-01-29 23:00:59.815814: cannot open playerdata.dat (scores file). check file exists/corrupted
+ErrorHandle: UndefinedError: 'qrcodegen.QrCode object' has no attribute 'to_svg_str'
+2023-01-29 23:00:59.985025: cannot open playerdata.dat (scores file). check file exists/corrupted
+ErrorHandle: UndefinedError: 'qrcodegen.QrCode object' has no attribute 'to_svg_str'
+2023-01-29 23:01:33.933387: cannot open playerdata.dat (scores file). check file exists/corrupted
+ErrorHandle: UndefinedError: 'qrcodegen.QrCode object' has no attribute 'to_svg_str'

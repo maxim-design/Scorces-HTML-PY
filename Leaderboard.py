@@ -1,7 +1,25 @@
 from flask import Flask, render_template
-import os, json
+import os, json, socket, base64
 from Data import Utils
+from io import BytesIO
+from qrcode import QRCode
+import boto3
 
+instance_id = 'i-0401da1e3420f1206'
+client = boto3.client('ec2', region_name='eu-west-1',
+    aws_access_key_id='AKIA4XZYHXUEJ42YMJUL',
+    aws_secret_access_key='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')
+response = client.describe_instances(InstanceIds=[instance_id])
+public_ip = response['Reservations'][0]['Instances'][0]['PublicIpAddress']
+
+# public_ip = socket.gethostbyname(socket.gethostname())
+qr = QRCode(version=1, box_size=10, border=5)
+qr.add_data(public_ip)
+qr.make(fit=True)
+img = qr.make_image(fill_color="black", back_color="white")
+buffer = BytesIO()
+img.save(buffer, format="PNG")
+img_str = base64.b64encode(buffer.getvalue()).decode()
 
 TEMPLATE_DIR = os.path.abspath('./Data/templates')
 STATIC_DIR = os.path.abspath('./Data/static')
@@ -12,9 +30,10 @@ def File_Content():
    try:
         with open('Data/playerdata.dat') as json_file:
             data = json.load(json_file)
-        return render_template("index.html", SCORES=dict(data))
+        return render_template("index.html", SCORES=dict(data), img_str=img_str)
    except Exception as e:
         errormsg = f"{e.__class__.__name__}: {e}"
+        print(e)
         Utils.error_logging(f"""{Utils.BAD_RETURN_CODE["3001"]}\nErrorHandle: {errormsg}""")
         return """<html>
                         <head>
@@ -50,4 +69,4 @@ def File_Content():
                         </html>""" #### this section contains the hole image in byte64 format. expand with care :)
 
 if __name__ == '__main__':
-    app.run(debug=True, host="0.0.0.0")
+    app.run(debug=True, host="0.0.0.0", port=80)

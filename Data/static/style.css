@@ -47,12 +47,18 @@ body {
     display: none; 
 }
 
-
+img {
+	scale: 50%;
+    position: static; /* positions the image relative to the container */
+    bottom: 0; /* aligns the bottom edge of the image with the bottom edge of the container */
+    left: 0; /* aligns the left edge of the image with the left edge of the container */
+}
 
 #image {
-	background-image: URL(background.jpg);
-	background-size: cover;
-	background-position: center;
+	background-image: URL(background2.jpg);
+	background-size: contain;
+    background-repeat: no-repeat;
+	background-position: center; 
 	height: 1024px auto;
 	width: 640px auto;
 	margin: 20px auto;

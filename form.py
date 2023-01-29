@@ -24,4 +24,4 @@ def submit():
         return jsonify(success=False)
 
 if __name__ == '__main__':
-    app.run(debug=True, port=23789)
+    app.run(debug=True, host="0.0.0.0", port=23789)
