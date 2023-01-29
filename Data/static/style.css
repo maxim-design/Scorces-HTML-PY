@@ -55,7 +55,7 @@ img {
 }
 
 #image {
-	background-image: URL(background2.jpg);
+	background-image: URL(background.jpg);
 	background-size: contain;
     background-repeat: no-repeat;
 	background-position: center; 
