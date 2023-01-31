@@ -5,7 +5,6 @@ from io import BytesIO
 from qrcode import QRCode
 import boto3
 
-
 # instance_id = '[AWS-INSTANCE-ID]'
 # client = boto3.client('ec2', region_name='eu-west-1',
 #     aws_access_key_id='[SOME-KEY-ID]',
