@@ -4,8 +4,9 @@ import os, json
 
 
 TEMPLATE_DIR = os.path.abspath('./Data/FormTemplates')
+STATIC_DIR = os.path.abspath('./Data/static')
 
-app = Flask(__name__, template_folder=TEMPLATE_DIR)
+app = Flask(__name__, template_folder=TEMPLATE_DIR, static_folder=STATIC_DIR)
 
 @app.route('/')
 def index():

@@ -5,14 +5,15 @@ from io import BytesIO
 from qrcode import QRCode
 import boto3
 
-instance_id = 'i-0401da1e3420f1206'
-client = boto3.client('ec2', region_name='eu-west-1',
-    aws_access_key_id='AKIA4XZYHXUEJ42YMJUL',
-    aws_secret_access_key='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')
-response = client.describe_instances(InstanceIds=[instance_id])
-public_ip = response['Reservations'][0]['Instances'][0]['PublicIpAddress']
+# instance_id = '[AWS-INSTANCE-ID]'
+# client = boto3.client('ec2', region_name='eu-west-1',
+#     aws_access_key_id='[SOME-KEY-ID]',
+#     aws_secret_access_key='[SOME-ACCESS-KEY]')
+# response = client.describe_instances(InstanceIds=[instance_id])
+# public_ip = response['Reservations'][0]['Instances'][0]['PublicIpAddress']
 
-# public_ip = socket.gethostbyname(socket.gethostname())
+public_ip = socket.gethostbyname(socket.gethostname())
+
 qr = QRCode(version=1, box_size=10, border=5)
 qr.add_data(public_ip)
 qr.make(fit=True)
